@@ -11,15 +11,8 @@ let secondImage = null;
 let windowWidth=document.getElementById('window-width')
 
 
-setInterval(()=>
-{
-let width=window.innerWidth;
-windowWidth.textContent="Width:"+width;
-},100);
-
 
 Array.from(images).map(image=>image.draggable=false) //->to avoid cheating :P
-
 
 ////Image related functions ..
 function setImages()
@@ -114,9 +107,6 @@ modal.firstChild.innerHTML='You won';
 }
 //////////
 
-
-
-
 replayButton.onclick=function()
 {
 let modal=document.getElementById('modal-replay');
@@ -124,14 +114,6 @@ modal.style.display='none';
 gamecount++;
 resetGame();
 }
-
-let testbutton=document.getElementById("test")
-testbutton.addEventListener("click",function()
-{
-images.forEach(image=>image.classList.remove("hidden"));
-setNewImages();
-})
-
 
 setImages();
 showImages();
