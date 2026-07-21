@@ -28,8 +28,8 @@ html {
     transform: translate(-50%, 0);
     box-shadow: 1px 1px 3px 2px black;
     display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     column-gap: 1rem;
     row-gap: 1rem;
     align-items: center;
@@ -102,23 +102,48 @@ button.replay {
     .game-container {
         width: 90%;
         height: 80%;
-        grid-template-columns: repeat(5, auto);
-        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        padding: 1rem;
     }
 }
 
-@media screen and (max-width:560px) {
+@media screen and (max-width:800px) {
     .game-container img {
         min-width: 100%;
         max-width: 100%;
-        min-height: 80%;
-        max-height: 80%
+        min-height: 100%;
+        max-height: 100%
     }
 
     .game-container {
         width: 90%;
         height: 80%;
-        grid-template-columns: repeat(4, auto);
-        grid-template-rows: repeat(5, auto);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .counter-flips {
+        top: 1%;
+        font-size: 20px;
+    }
+
+    .game-container img {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 80%;
+        max-height: 80%;
+    }
+
+    .game-container {
+        width: 90%;
+        height: 80%;
+        top: 2%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        padding: 1rem;
     }
 }
